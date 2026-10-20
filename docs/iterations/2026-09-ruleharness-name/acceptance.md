@@ -3,19 +3,27 @@ iteration: 2026-09-ruleharness-name
 status: complete
 ---
 
-# 验收记录
+# Acceptance record
 
-## 基线
+## Baseline
 
-- 结构校验通过，角色为 core / core-maintainer。
-- 10 个抽象路由回归用例通过。
-- 开始前工作区干净；目录命名变更已在先前提交中完成。
+- Structural validation passed; the role is core / core-maintainer.
+- 10 abstract routing regression cases passed.
+- The working tree was clean before starting; the directory naming change had
+  been completed in an earlier commit.
 
-## 变更后
+## After the change
 
-- [x] 展示名和仓库名已在当前文档中统一，补充了跨客户端定位及当前支持边界。
-- [x] Codex 专属机制、core/overlay 角色和历史迭代记录保持原有语义。
-- [x] 结构校验通过，10 个路由回归用例通过，expected values 未修改。
-- [x] 托管仓库已改名为 `rule-harness`，本 checkout 的 origin 已同步并验证 Git 访问。
-- [x] 旧展示名与仓库名仅保留在本轮 decisions 中用于说明迁移关系。
-- [x] 完整 diff、allowlist、暂存清单及 `git diff --check` 审查完成，文档以一个原子提交保存。
+- [x] The display name and repository name are unified across current
+      documents, with the cross-client positioning and the current support
+      boundary added.
+- [x] Codex-specific mechanisms, core/overlay roles, and historical iteration
+      records keep their original semantics.
+- [x] Structural validation passes and the 10 routing regression cases pass;
+      expected values were not modified.
+- [x] The hosted repository has been renamed to `rule-harness`; this
+      checkout's origin has been updated and Git access verified.
+- [x] The old display name and repository name remain only in this round's
+      decisions, to explain the migration.
+- [x] The complete diff, allowlist, staged file list, and `git diff --check`
+      review is complete; the documentation is saved in one atomic commit.

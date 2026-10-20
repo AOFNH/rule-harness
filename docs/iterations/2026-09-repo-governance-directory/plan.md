@@ -3,24 +3,32 @@ iteration: 2026-09-repo-governance-directory
 status: complete
 ---
 
-# 仓库治理目录命名
+# Repository governance directory naming
 
-## 目标
+## Goal
 
-将 `.instructions/` 改为 `.repo-governance/`，使目录名称直接表达仓库身份、
-维护角色和权限边界，并为后续治理元数据保留明确的扩展范围。
+Rename `.instructions/` to `.repo-governance/` so that the directory name
+directly expresses repository identity, maintenance role, and permission
+boundaries, and reserves a clear extension scope for future governance
+metadata.
 
-## 范围
+## Scope
 
-- 迁移 `repository-role.yaml`，同步 bootstrap、Git allowlist 和校验脚本。
-- 更新 README、live design 和 personal overlay 升级说明。
-- 明确新增治理文件需要单独定义 schema、读取方、归属和 allowlist。
+- Migrate `repository-role.yaml` and update the bootstrap, Git allowlist, and
+  validation script accordingly.
+- Update the README, live design, and personal overlay upgrade notes.
+- State that every new governance file needs its own schema, consumers,
+  ownership, and allowlist definition.
 
-本次不新增治理文件，不改变角色字段、维护权限或引用路由策略。
+This iteration adds no governance files and does not change role fields,
+maintenance permissions, or the reference routing strategy.
 
-## 验收
+## Acceptance
 
-- 结构校验能够从新路径读取 core 角色，脱敏扫描覆盖新目录。
-- 现有 10 个路由回归用例保持通过，expected values 不变。
-- 旧路径仅出现在迁移说明和本次历史记录中。
-- 完成 diff 与 allowlist 审查，并以一个原子提交保存。
+- Structural validation reads the core role from the new path, and the
+  redaction scan covers the new directory.
+- The existing 10 routing regression cases still pass, with expected values
+  unchanged.
+- The old path appears only in migration notes and this historical record.
+- Diff and allowlist review is complete, and the change is saved in one atomic
+  commit.

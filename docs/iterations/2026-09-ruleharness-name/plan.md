@@ -3,25 +3,34 @@ iteration: 2026-09-ruleharness-name
 status: complete
 ---
 
-# RuleHarness 项目命名
+# RuleHarness project naming
 
-## 目标
+## Goal
 
-采用展示名 `RuleHarness`、仓库名 `rule-harness`，以简短且不绑定客户端的名称
-表达指令管理、上下文路由与验证能力，为后续其他 agent 的适配保留空间。
+Adopt the display name `RuleHarness` and the repository name `rule-harness`: a
+short, client-neutral name that expresses instruction management, context
+routing, and validation, and leaves room for adapting other agents later.
 
-## 范围
+## Scope
 
-- 更新 README、bootstrap 标题、live design 和维护文档标题。
-- 明确当前首先面向 Codex，其他客户端须完成适配和验证后才能声明支持。
-- 将 core/overlay 作为仓库角色表达，保持既有路由协议和权限边界。
-- 同步托管仓库名称与本 checkout 的 origin 地址。
+- Update the README, bootstrap title, live design, and maintenance document
+  titles.
+- State that the project currently targets Codex first, and that other clients
+  may be declared supported only after their adaptation and validation are
+  complete.
+- Express core/overlay as a repository role while keeping the existing routing
+  protocol and permission boundaries.
+- Synchronize the hosted repository name and this checkout's origin URL.
 
-本轮不实现新客户端适配，不修改路由 expected values、角色 schema 或历史迭代记录。
+This round does not implement new client adapters and does not change routing
+expected values, the role schema, or historical iteration records.
 
-## 验收
+## Acceptance
 
-- 当前文档使用新名称，旧名称仅在命名变更记录中出现。
-- 结构校验和现有 10 个路由回归用例通过。
-- 完成 diff 与 allowlist 审查，以一个原子提交保存文档变更。
-- 验证托管仓库新名称及 origin 地址；无法完成时明确记录外部阻塞。
+- Current documents use the new name; the old name appears only in the naming
+  change record.
+- Structural validation and the existing 10 routing regression cases pass.
+- Diff and allowlist review is complete, and the documentation change is saved
+  in one atomic commit.
+- The new hosted repository name and the origin URL are verified; if this
+  cannot be completed, the external blocker is recorded explicitly.
